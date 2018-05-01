@@ -1,0 +1,48 @@
+.TH "HIERA" "1" "2012" "hiera" "Utils"
+.SH "NAME"
+hiera \- Lightweight Pluggable Hierarchical Database
+.SH "SYNOPSIS"
+.LP 
+.B hiera [\fBoptions\fR]
+.SH "DESCRIPTION"
+.LP 
+hiera is a simple pluggable hierarchical database.
+.br 
+.SH "OPTIONS"
+.LP
+Mandatory arguments to long options are mandatory for short options too.
+.LP
+.TP
+\fB\-V\fR, \fB\-\-version\fR
+Version information
+.TP
+\fB\-d\fR, \fB\-\-debug\fR
+Show debugging information
+.TP
+\fB\-a\fR, \fB\-\-array\fR
+Array search
+.TP
+\fB\-h\fR, \fB\-\-hash\fR
+Hash search
+.TP
+\fB\-c\fR, \fB\-\-config\fR CONFIG
+Configuration file
+.TP
+\fB\-j\fR, \fB\-\-json\fR SCOPE
+JSON format file to load scope from
+.TP
+\fB\-y\fR, \fB\-\-yaml\fR SCOPE
+YAML format file to load scope from
+.TP
+\fB\-m\fR, \fB\-\-mcollective\fR IDENTITY
+Retrieve facts from a node via mcollective as scope
+.HP
+\fB\-i\fR, \fB\-\-inventory_service\fR IDENTITY Retrieve facts for a node via Puppet's inventory service as scope
+.PP
+.br
+.SH "AUTHORS"
+.LP 
+hiera is a part of Puppet Hiera and developed by Puppet Labs <info@puppetlabs.com>, (R.I.Pienaar <rip@devco.net> respectively).
+.LP
+This man page was written by Patrick Ringl <patrick_@freenet.de> for the Debian
+GNU/Linux distribution (but it may also be used by others).

@@ -1,0 +1,33 @@
+Source: hiera
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Patrick Ringl <patrick_@freenet.de>,
+           Jonas Genannt <genannt@debian.org>
+Build-Depends: debhelper (>= 9~),
+               gem2deb,
+               rake,
+               ruby-deep-merge,
+               ruby-json,
+               ruby-mocha,
+               ruby-rspec
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/hiera.git
+Vcs-Browser: http://anonscm.debian.org/gitweb?p=pkg-ruby-extras/hiera.git;a=summary
+Homepage: https://github.com/puppetlabs/hiera/
+XS-Ruby-Versions: all
+
+Package: hiera
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-deep-merge,
+         ruby-json,
+         ${misc:Depends},
+         ${shlibs:Depends}
+Suggests: mcollective-common, puppet-common
+Description: Light weight hierarchical data store
+ ruby-hiera is a simple pluggable hierarchical database. It can be
+ used to store various information and therefore is a good fit for
+ the representation of infrastructure information.
+ It can be used to query multiple data backends e.g. YAML or Puppet.

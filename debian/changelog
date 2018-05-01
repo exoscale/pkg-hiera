@@ -1,0 +1,76 @@
+hiera (2.0.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * d/control:
+    - added depends: ruby-deep-merge
+    - bumped debhelper version dependency
+  * d/compat: bumped compat level to 9
+  * d/p/rspec3.patch: added patch for rspec3
+
+ -- Jonas Genannt <genannt@debian.org>  Sat, 15 Aug 2015 20:36:44 +0200
+
+hiera (2.0.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * d/control:
+    - removed transitional ruby-hiera package
+    - bumped standards version to 3.9.6 (no changes needed)
+    - switched to my @debian.org address
+    - removed version depend on gem2deb (0.3.0 is available since Wheezy)
+  * d/copyright: updated years of copyright
+  * Imported Upstream version 2.0.0
+
+ -- Jonas Genannt <genannt@debian.org>  Wed, 03 Jun 2015 18:50:37 +0200
+
+hiera (1.3.4-1) unstable; urgency=high
+
+  * Team upload.
+  * d/control:
+   - removed version depend on mcollective-common, puppet-common. fits for all
+     debian releases.
+   - added ruby-json to depends, included json backend needs ruby-json
+  * d/copyright: updated years of copyright
+  * Imported Upstream version 1.3.4
+    - fixes CVE-2014-3248
+  * renamed package from ruby-hiera to hiera (Closes: #751386)
+    PuppetLabs uses hiera as dependency for the PuppetLabs packages.
+    If you are using PuppetLabs Repository only for PuppetDB you
+    will run into dependency problems.
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Thu, 24 Jul 2014 10:44:17 +0200
+
+ruby-hiera (1.3.0-1) unstable; urgency=low
+
+  [ Stig Sandbeck Mathisen ]
+  * Refresh build tests
+    - Add ruby-json to list of build dependencies
+    - remove spec.opts reference
+  * debian/watch:
+   - ignore release candidates and beta versions when looking for
+     new versions
+   - only use plain versions
+  * Update changelog
+
+  [ Cédric Boutillier ]
+  * debian/control: remove obsolete DM-Upload-Allowed flag
+  * use canonical URI in Vcs-* fields
+
+  [ Jonas Genannt ]
+  * New Upstream Release 1.3.0
+  * bumped standards version
+  * d/control:
+    - added myself as uploader
+    - wrap-sort
+    - changed Recommends to Suggests (Closes: #693845)
+    - fixed typos in description
+  * Imported Upstream version 1.2.1
+  * removed dont-require-rubygems since rubygems is
+    loaded per default in 1.9/2.0
+
+ -- Jonas Genannt <jonas.genannt@capi2name.de>  Sun, 24 Nov 2013 01:07:54 +0100
+
+ruby-hiera (1.0.0~rc3-1) unstable; urgency=low
+
+  * Initial release (Closes: #677875)
+
+ -- Patrick Ringl <patrick_@freenet.de>  Sun, 17 Jun 2012 07:02:21 +0200
